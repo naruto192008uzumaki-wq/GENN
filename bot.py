@@ -1,9 +1,11 @@
 import telebot, random, re, time, requests
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+import os
 
 # ✅ Bot Token
-TOKEN = "8203509522:AAFZTOjHrMfGj6nkbFszCMIeY7JblQasdK8"
-bot = telebot.TeleBot(TOKEN)
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+bot = telebot.TeleBot(BOT_TOKEN)
+
 
 # ✅ Anime clips list
 anime_clips = [
